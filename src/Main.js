@@ -28,6 +28,16 @@ const Ul = styled.ul`
     }
 `;
 
+const Footer = styled.div`
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 30px;
+    font-weight: bold;
+`;
 
 
 function MainPage() {
@@ -43,7 +53,7 @@ function MainPage() {
                     </Ul>
                 </Navbar>
 
-                <hr />
+
 
                 <Switch>
                     <Route exact path='/' component={Home} />
@@ -51,6 +61,11 @@ function MainPage() {
                     <Route path='/settings' component={Settings} />
                 </Switch>
 
+
+                <Footer>
+                    <p>This is a fixed footer and should be treated as such. *wink wink*</p>
+                </Footer>
+                
             </div>
         </Router>
     )
