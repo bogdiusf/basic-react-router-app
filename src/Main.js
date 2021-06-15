@@ -39,6 +39,11 @@ const Footer = styled.div`
     font-weight: bold;
 `;
 
+const StyledLink = styled(Link)`
+font-size: 25px;
+color: black;
+`
+
 
 function MainPage() {
     return (
@@ -47,13 +52,11 @@ function MainPage() {
                 <Navbar>
                     <h1>Navbar</h1>
                     <Ul>
-                        <li><Link to={'/'} className="lnk">Home</Link></li>
-                        <li><Link to={'/user'} className="lnk">User</Link></li>
-                        <li><Link to={'/settings'} className="lnk">Settings</Link></li>
+                        <li><StyledLink to={'/'} >Home</StyledLink></li>
+                        <li><StyledLink to={'/user'} >User</StyledLink></li>
+                        <li><StyledLink to={'/settings'} >Settings</StyledLink></li>
                     </Ul>
                 </Navbar>
-
-
 
                 <Switch>
                     <Route exact path='/' component={Home} />
@@ -65,7 +68,7 @@ function MainPage() {
                 <Footer>
                     <p>This is a fixed footer and should be treated as such. *wink wink*</p>
                 </Footer>
-                
+
             </div>
         </Router>
     )
